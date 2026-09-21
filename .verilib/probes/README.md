@@ -1,8 +1,8 @@
 # Committed probe artifacts
 
-- `lean_SmImportTest_0.1.0.json` — probe-lean extract of this project (3 atoms).
+- `lean_SmImportTest_0.1.0.json` — probe-lean extract of this project (4 atoms).
 - `lean_SecureMessaging_d5dbd6e.json` — probe-lean extract of secure-messaging at commit `d5dbd6e` (1543 atoms; copied here for reproducibility).
-- `merged_smimporttest_securemessaging.json` — `probe merge` output: 1546 atoms, schema `probe/merged-atoms` 3.0, both sources recorded under `inputs`. External dependency edges of this project's atoms (e.g. `probe:ErasureCode.encode`) resolve to atom keys present in the merged graph.
+- `merged_smimporttest_securemessaging.json` — `probe merge` output: 1547 atoms, schema `probe/merged-atoms` 3.0, both sources recorded under `inputs`. External dependency edges of this project's atoms (e.g. `probe:ErasureCode.encode`) resolve to atom keys present in the merged graph.
 
 ## Regenerating
 

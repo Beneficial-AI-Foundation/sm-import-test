@@ -10,8 +10,8 @@
     {
       "schema": "probe-lean/extract",
       "source": {
-        "repo": "",
-        "commit": "",
+        "repo": "https://github.com/Beneficial-AI-Foundation/sm-import-test.git",
+        "commit": "24a27022b5ef2df6a8d69122e55cbbeec3702636",
         "language": "lean",
         "package": "SmImportTest",
         "package-version": "0.1.0"
@@ -28,7 +28,7 @@
       }
     }
   ],
-  "timestamp": "2026-09-21T16:55:28Z",
+  "timestamp": "2026-09-21T18:55:24Z",
   "data": {
     "probe:AEADScheme": {
       "display-name": "AEADScheme",
@@ -64487,6 +64487,7 @@
       "is-relevant": true,
       "rust-source": null,
       "specs": [
+        "probe:constCode_decodable_univ",
         "probe:constCode_decode",
         "probe:constCode_encode"
       ],
@@ -64507,6 +64508,74 @@
       "type-dependencies-external": [
         "probe:Bool",
         "probe:ErasureCode"
+      ],
+      "verification-status": "transitively-verified"
+    },
+    "probe:constCode_decodable_univ": {
+      "display-name": "constCode_decodable_univ",
+      "dependencies": [
+        "probe:constCode"
+      ],
+      "code-module": "SmImportTest",
+      "code-path": "SmImportTest.lean",
+      "code-text": {
+        "lines-start": 29,
+        "lines-end": 35
+      },
+      "kind": "theorem",
+      "language": "lean",
+      "codomain-head": "ErasureCode.Decodable",
+      "codomain-is-prop": false,
+      "codomain-last-arg-is-bool": false,
+      "is-aeneas-generated": false,
+      "is-hidden": false,
+      "is-ignored": false,
+      "is-in-package": true,
+      "is-lean-generated": false,
+      "is-primary-spec": false,
+      "is-relevant": true,
+      "rust-source": null,
+      "term-dependencies": [
+        "probe:constCode"
+      ],
+      "term-dependencies-external": [
+        "probe:Bool",
+        "probe:Eq",
+        "probe:Eq.mpr",
+        "probe:ErasureCode.N",
+        "probe:ErasureCode.decodable_encodeChunks_of_nchunk_le_card",
+        "probe:ErasureCode.nchunk",
+        "probe:Fin",
+        "probe:Fin.fintype",
+        "probe:Fin.instInhabited",
+        "probe:Finset.Nonempty",
+        "probe:Finset.card",
+        "probe:Finset.univ",
+        "probe:Finset.univ_nonempty",
+        "probe:LE.le",
+        "probe:Nat",
+        "probe:Nat.instNeZeroSucc",
+        "probe:OfNat.ofNat",
+        "probe:id",
+        "probe:instLENat",
+        "probe:instNonemptyOfInhabited",
+        "probe:instOfNatNat"
+      ],
+      "type-dependencies": [
+        "probe:constCode"
+      ],
+      "type-dependencies-external": [
+        "probe:Bool",
+        "probe:ErasureCode.Decodable",
+        "probe:ErasureCode.N",
+        "probe:ErasureCode.encodeChunks",
+        "probe:ErasureCode.nchunk",
+        "probe:Fin",
+        "probe:Fin.fintype",
+        "probe:Finset.univ",
+        "probe:Nat",
+        "probe:OfNat.ofNat",
+        "probe:instOfNatNat"
       ],
       "verification-status": "transitively-verified"
     },
