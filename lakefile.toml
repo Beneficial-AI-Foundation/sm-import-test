@@ -1,0 +1,13 @@
+name = "SmImportTest"
+version = "0.1.0"
+defaultTargets = ["SmImportTest"]
+# Reuse secure-messaging's already-cloned-and-built dependency packages
+# (mathlib etc.) instead of re-fetching and rebuilding them here.
+packagesDir = "../secure-messaging/.lake/packages"
+
+[[require]]
+name = "SecureMessaging"
+path = "../secure-messaging"
+
+[[lean_lib]]
+name = "SmImportTest"
