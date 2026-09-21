@@ -4,6 +4,10 @@ Minimal Lean 4 project that imports [secure-messaging](https://github.com/Benefi
 
 `SmImportTest.lean` defines three declarations (`constCode`, `constCode_encode`, `constCode_decode`) that reference `SecureMessaging.ErasureCode.Defs`. Extracting both projects with probe-lean and merging the two extracts yields a single graph in which the atoms of this project have dependency edges resolving to secure-messaging atoms.
 
+## Call graph viewer
+
+The merged graph is browsable at **https://beneficial-ai-foundation.github.io/sm-import-test/**, rendered with the [scip-callgraph](https://github.com/Beneficial-AI-Foundation/scip-callgraph) web viewer. `.github/workflows/deploy-pages.yml` calls that repo's reusable `generate-lean-callgraph.yml` workflow with the committed merged JSON as pre-built atoms (the project cannot be built in CI, since it needs a built sibling secure-messaging checkout).
+
 ## Committed artifacts
 
 - `.verilib/probes/lean_SmImportTest_0.1.0.json` — probe-lean extract of this project (3 atoms).
