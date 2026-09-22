@@ -1,6 +1,6 @@
 name: Deploy Call Graph to GitHub Pages
 
-# Renders the committed merged probe graph with the scip-callgraph web viewer
+# Renders the committed merged probe graph with the probegraph web viewer
 # and deploys it to GitHub Pages. The project itself is not built in CI: it
 # needs a built sibling secure-messaging checkout (see README), so the graph
 # JSON is committed and passed to the reusable workflow as pre-built atoms.
@@ -41,7 +41,7 @@ jobs:
   callgraph:
     name: Build viewer and deploy
     needs: upload-atoms
-    uses: Beneficial-AI-Foundation/scip-callgraph/.github/workflows/generate-lean-callgraph.yml@main
+    uses: Beneficial-AI-Foundation/probegraph/.github/workflows/generate-lean-callgraph.yml@main
     permissions:
       contents: read
       pages: write
